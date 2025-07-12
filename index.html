@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silk Road Dreams - Discover Uzbekistan's Ancient Cities</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-content">
+            <div class="uzbekistan-map">
+                <div class="map-outline"></div>
+                <div class="caravan">🐪</div>
+                <div class="city-dots">
+                    <div class="city-dot"></div>
+                    <div class="city-dot"></div>
+                    <div class="city-dot"></div>
+                </div>
+            </div>
+            <h2>Discovering Uzbekistan's Treasures...</h2>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-mosque"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="brand-name">Silk Road Dreams</span>
+                    <span class="brand-tagline">Uzbekistan Tours</span>
+                </div>
+            </div>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link" data-en="Home" data-uz="Bosh sahifa" data-ru="Главная">Home</a></li>
+                <li><a href="#about" class="nav-link" data-en="About" data-uz="Biz haqimizda" data-ru="О нас">About</a></li>
+                <li><a href="#tours" class="nav-link" data-en="Tours" data-uz="Sayohatlar" data-ru="Туры">Tours</a></li>
+                <li><a href="#gallery" class="nav-link" data-en="Gallery" data-uz="Galereya" data-ru="Галерея">Gallery</a></li>
+                <li><a href="#contact" class="nav-link" data-en="Contact" data-uz="Aloqa" data-ru="Контакты">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <div class="language-switcher">
+                    <button class="language-btn" id="languageBtn">
+                        <i class="fas fa-globe"></i>
+                        <span id="currentLang">EN</span>
+                    </button>
+                    <div class="language-dropdown" id="languageDropdown">
+                        <div class="language-option" data-lang="en">
+                            <img src="https://flagcdn.com/24x18/us.png" alt="English">
+                            <span>English</span>
+                        </div>
+                        <div class="language-option" data-lang="uz">
+                            <img src="https://flagcdn.com/24x18/uz.png" alt="O'zbek">
+                            <span>O'zbek</span>
+                        </div>
+                        <div class="language-option" data-lang="ru">
+                            <img src="https://flagcdn.com/24x18/ru.png" alt="Русский">
+                            <span>Русский</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="cta-button" data-en="Book Tour" data-uz="Sayohat buyurtma" data-ru="Забронировать">Book Tour</button>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-carousel">
+            <div class="carousel-slide active">
+                <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1920&h=1080&fit=crop')"></div>
+                <div class="slide-overlay"></div>
+            </div>
+            <div class="carousel-slide">
+                <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1564507592333-c60657eea523?w=1920&h=1080&fit=crop')"></div>
+                <div class="slide-overlay"></div>
+            </div>
+            <div class="carousel-slide">
+                <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1539650116574-75c0c6d5b8b7?w=1920&h=1080&fit=crop')"></div>
+                <div class="slide-overlay"></div>
+            </div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-subtitle" data-en="Discover Uzbekistan" data-uz="O'zbekistonni kashf eting" data-ru="Откройте Узбекистан">Discover Uzbekistan</div>
+                <h1 class="hero-title">
+                    <span class="title-line" data-en="Journey Through the Heart of" data-uz="Markaziy qalbida sayohat" data-ru="Путешествие в сердце">Journey Through the Heart of</span>
+                    <span class="title-main">Central Asia</span>
+                    <span class="title-line" data-en="Ancient Cities & Timeless Culture" data-uz="Qadimiy shaharlar va abadiy madaniyat" data-ru="Древние города и вечная культура">Ancient Cities & Timeless Culture</span>
+                </h1>
+                <p class="hero-description" data-en="Explore the magnificent cities of Samarkand, Bukhara, and Khiva. Experience the architectural wonders, vibrant bazaars, and rich heritage of Uzbekistan's Silk Road legacy." data-uz="Samarqand, Buxoro va Xivaning ajoyib shaharlarini kashf eting." data-ru="Исследуйте великолепные города Самарканд, Бухару и Хиву. Откройте архитектурные чудеса и богатое наследие.">
+                    Explore the magnificent cities of Samarkand, Bukhara, and Khiva. Experience the architectural wonders, vibrant bazaars, and rich heritage of Uzbekistan's Silk Road legacy.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" data-en="Explore Tours" data-uz="Sayohatlarni ko'ring" data-ru="Смотреть туры">
+                        <span>Explore Tours</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button class="btn-secondary" data-en="Watch Video" data-uz="Video ko'ring" data-ru="Смотреть видео">
+                        <i class="fas fa-play"></i>
+                        <span>Watch Video</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-controls">
+            <button class="carousel-btn prev" id="prevBtn">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="carousel-indicators" id="carouselIndicators">
+                <div class="indicator active" data-slide="0"></div>
+                <div class="indicator" data-slide="1"></div>
+                <div class="indicator" data-slide="2"></div>
+            </div>
+            <button class="carousel-btn next" id="nextBtn">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <div class="scroll-text" data-en="Scroll to explore" data-uz="Ko'rish uchun aylantiring" data-ru="Прокрутите для изучения">Scroll to explore</div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle" data-en="Our Heritage" data-uz="Bizning merosimiz" data-ru="Наше наследие">Our Heritage</div>
+                <h2 class="section-title" data-en="Guardians of Uzbekistan's Stories" data-uz="O'zbekiston hikoyalarining qo'riqchilari" data-ru="Хранители историй Узбекистана">Guardians of Uzbekistan's Stories</h2>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="historical-quote">
+                        <i class="fas fa-quote-left"></i>
+                        <p data-en="Samarkand - a city where every stone tells a story of the great Silk Road." data-uz="Samarqand - har bir toshi buyuk Ipak yo'li haqida hikoya qiladigan shahar." data-ru="Самарканд - город, где каждый камень рассказывает историю великого Шёлкового пути.">
+                            "Samarkand - a city where every stone tells a story of the great Silk Road."
+                        </p>
+                    </div>
+                    
+                    <div class="about-description">
+                        <p data-en="For over 15 years, we have been sharing the wonders of Uzbekistan with travelers from around the world. Our deep knowledge of local customs, hidden gems, and historical significance ensures authentic experiences in the heart of Central Asia." data-uz="15 yildan ortiq vaqt davomida biz dunyo bo'ylab sayohatchilar bilan O'zbekistonning mo'jizalarini bo'lishib kelmoqdamiz." data-ru="Более 15 лет мы делимся чудесами Узбекистана с путешественниками со всего мира.">
+                            For over 15 years, we have been sharing the wonders of Uzbekistan with travelers from around the world. Our deep knowledge of local customs, hidden gems, and historical significance ensures authentic experiences in the heart of Central Asia.
+                        </p>
+                    </div>
+
+                    <div class="heritage-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="4">0</div>
+                            <div class="stat-label" data-en="Historic Cities" data-uz="Tarixiy shaharlar" data-ru="Исторические города">Historic Cities</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="15">0</div>
+                            <div class="stat-label" data-en="Years Experience" data-uz="Yillik tajriba" data-ru="Лет опыта">Years Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="5000">0</div>
+                            <div class="stat-label" data-en="Happy Travelers" data-uz="Baxtli sayohatchilar" data-ru="Довольных туристов">Happy Travelers</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-visual">
+                    <div class="uzbekistan-highlights">
+                        <div class="highlight-item" data-aos="fade-up">
+                            <div class="highlight-icon">🕌</div>
+                            <div class="highlight-content">
+                                <h4 data-en="Registan Square" data-uz="Registon maydoni" data-ru="Площадь Регистан">Registan Square</h4>
+                                <p data-en="The heart of ancient Samarkand" data-uz="Qadimiy Samarqandning yuragi" data-ru="Сердце древнего Самарканда">The heart of ancient Samarkand</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="highlight-icon">🏛️</div>
+                            <div class="highlight-content">
+                                <h4 data-en="Bukhara Old City" data-uz="Buxoro eski shahri" data-ru="Старый город Бухара">Bukhara Old City</h4>
+                                <p data-en="Living museum of Islamic architecture" data-uz="Islom me'morchiligining tirik muzeyi" data-ru="Живой музей исламской архитектуры">Living museum of Islamic architecture</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item" data-aos="fade-up" data-aos-delay="400">
+                            <div class="highlight-icon">🏰</div>
+                            <div class="highlight-content">
+                                <h4 data-en="Khiva Fortress" data-uz="Xiva qal'asi" data-ru="Крепость Хива">Khiva Fortress</h4>
+                                <p data-en="Best preserved Silk Road city" data-uz="Eng yaxshi saqlanib qolgan Ipak yo'li shahri" data-ru="Лучше всего сохранившийся город Шёлкового пути">Best preserved Silk Road city</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item" data-aos="fade-up" data-aos-delay="600">
+                            <div class="highlight-icon">🎨</div>
+                            <div class="highlight-content">
+                                <h4 data-en="Traditional Crafts" data-uz="An'anaviy hunarmandchilik" data-ru="Традиционные ремёсла">Traditional Crafts</h4>
+                                <p data-en="Living heritage of master artisans" data-uz="Usta hunarmandlarning tirik merosi" data-ru="Живое наследие мастеров-ремесленников">Living heritage of master artisans</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tours Section -->
+    <section class="tours-section" id="tours">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle" data-en="Uzbekistan Adventures" data-uz="O'zbekiston sarguzashtlari" data-ru="Приключения по Узбекистану">Uzbekistan Adventures</div>
+                <h2 class="section-title" data-en="Choose Your Uzbekistan Journey" data-uz="O'zbekiston sayohatingizni tanlang" data-ru="Выберите ваше путешествие по Узбекистану">Choose Your Uzbekistan Journey</h2>
+            </div>
+
+            <div class="tours-filter">
+                <button class="filter-btn active" data-filter="all" data-en="All Tours" data-uz="Barcha sayohatlar" data-ru="Все туры">All Tours</button>
+                <button class="filter-btn" data-filter="classic" data-en="Classic Cities" data-uz="Klassik shaharlar" data-ru="Классические города">Classic Cities</button>
+                <button class="filter-btn" data-filter="cultural" data-en="Cultural Heritage" data-uz="Madaniy meros" data-ru="Культурное наследие">Cultural Heritage</button>
+                <button class="filter-btn" data-filter="adventure" data-en="Adventure" data-uz="Sarguzasht" data-ru="Приключения">Adventure</button>
+            </div>
+
+            <div class="tours-grid">
+                <div class="tour-card" data-category="classic cultural">
+                    <div class="tour-image">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop" alt="Samarkand Registan">
+                        <div class="tour-overlay">
+                            <div class="tour-duration">5 Days</div>
+                            <div class="tour-badge">Most Popular</div>
+                        </div>
+                    </div>
+                    <div class="tour-content">
+                        <h3 data-en="Samarkand Explorer" data-uz="Samarqand tadqiqotchisi" data-ru="Исследователь Самарканда">Samarkand Explorer</h3>
+                        <p class="tour-description" data-en="Discover the jewel of the Silk Road with visits to Registan Square, Shah-i-Zinda, and Gur-e-Amir mausoleum." data-uz="Registon maydoni, Shohizinda va Gur-i Amir maqbarasi bilan Ipak yo'lining gavharini kashf eting." data-ru="Откройте жемчужину Шёлкового пути с посещением площади Регистан, Шахи-Зинда и мавзолея Гур-э-Амир.">
+                            Discover the jewel of the Silk Road with visits to Registan Square, Shah-i-Zinda, and Gur-e-Amir mausoleum.
+                        </p>
+                        <div class="tour-highlights">
+                            <span class="highlight">Registan Square</span>
+                            <span class="highlight">Shah-i-Zinda</span>
+                            <span class="highlight">Local Bazaar</span>
+                        </div>
+                        <div class="tour-footer">
+                            <div class="tour-price">
+                                <span class="price">$450</span>
+                                <span class="price-note" data-en="per person" data-uz="kishi uchun" data-ru="за человека">per person</span>
+                            </div>
+                            <button class="tour-btn" data-en="Book Now" data-uz="Buyurtma berish" data-ru="Забронировать">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card" data-category="classic cultural">
+                    <div class="tour-image">
+                        <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?w=400&h=300&fit=crop" alt="Bukhara">
+                        <div class="tour-overlay">
+                            <div class="tour-duration">4 Days</div>
+                        </div>
+                    </div>
+                    <div class="tour-content">
+                        <h3 data-en="Bukhara Heritage Tour" data-uz="Buxoro meros sayohati" data-ru="Наследие Бухары">Bukhara Heritage Tour</h3>
+                        <p class="tour-description" data-en="Walk through the living museum of Bukhara, visiting ancient madrasas, trading domes, and the historic Ark fortress." data-uz="Qadimiy madrasalar, savdo gumbazlari va tarixiy Ark qal'asini ziyorat qilib, Buxoraning tirik muzeyi bo'ylab sayr qiling." data-ru="Прогуляйтесь по живому музею Бухары, посетите древние медресе, торговые купола и историческую крепость Арк.">
+                            Walk through the living museum of Bukhara, visiting ancient madrasas, trading domes, and the historic Ark fortress.
+                        </p>
+                        <div class="tour-highlights">
+                            <span class="highlight">Kalyan Minaret</span>
+                            <span class="highlight">Ark Fortress</span>
+                            <span class="highlight">Trading Domes</span>
+                        </div>
+                        <div class="tour-footer">
+                            <div class="tour-price">
+                                <span class="price">$380</span>
+                                <span class="price-note" data-en="per person" data-uz="kishi uchun" data-ru="за человека">per person</span>
+                            </div>
+                            <button class="tour-btn" data-en="Book Now" data-uz="Buyurtma berish" data-ru="Забронировать">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card" data-category="classic adventure">
+                    <div class="tour-image">
+                        <img src="https://images.unsplash.com/photo-1539650116574-75c0c6d5b8b7?w=400&h=300&fit=crop" alt="Khiva">
+                        <div class="tour-overlay">
+                            <div class="tour-duration">3 Days</div>
+                            <div class="tour-badge">UNESCO Site</div>
+                        </div>
+                    </div>
+                    <div class="tour-content">
+                        <h3 data-en="Khiva Time Travel" data-uz="Xiva vaqt sayohati" data-ru="Путешествие во времени в Хиве">Khiva Time Travel</h3>
+                        <p class="tour-description" data-en="Step into a perfectly preserved medieval city. Explore the Ichan Kala fortress and experience authentic Silk Road atmosphere." data-uz="Mukammal darajada saqlanib qolgan o'rta asr shahriga qadam qo'ying." data-ru="Шагните в идеально сохранившийся средневековый город. Исследуйте крепость Ичан-Кала.">
+                            Step into a perfectly preserved medieval city. Explore the Ichan Kala fortress and experience authentic Silk Road atmosphere.
+                        </p>
+                        <div class="tour-highlights">
+                            <span class="highlight">Ichan Kala</span>
+                            <span class="highlight">Islam Khoja Minaret</span>
+                            <span class="highlight">Tash Hauli Palace</span>
+                        </div>
+                        <div class="tour-footer">
+                            <div class="tour-price">
+                                <span class="price">$320</span>
+                                <span class="price-note" data-en="per person" data-uz="kishi uchun" data-ru="за человека">per person</span>
+                            </div>
+                            <button class="tour-btn" data-en="Book Now" data-uz="Buyurtma berish" data-ru="Забронировать">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card" data-category="classic cultural">
+                    <div class="tour-image">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop" alt="Grand Tour">
+                        <div class="tour-overlay">
+                            <div class="tour-duration">12 Days</div>
+                            <div class="tour-badge">Complete Journey</div>
+                        </div>
+                    </div>
+                    <div class="tour-content">
+                        <h3 data-en="Grand Uzbekistan Tour" data-uz="Buyuk O'zbekiston sayohati" data-ru="Большой тур по Узбекистану">Grand Uzbekistan Tour</h3>
+                        <p class="tour-description" data-en="The ultimate Uzbekistan experience covering all major Silk Road cities: Tashkent, Samarkand, Bukhara, and Khiva." data-uz="Barcha asosiy Ipak yo'li shaharlarini qamrab oluvchi eng zo'r O'zbekiston tajribasi." data-ru="Максимальное знакомство с Узбекистаном, охватывающее все основные города Шёлкового пути.">
+                            The ultimate Uzbekistan experience covering all major Silk Road cities: Tashkent, Samarkand, Bukhara, and Khiva.
+                        </p>
+                        <div class="tour-highlights">
+                            <span class="highlight">4 Ancient Cities</span>
+                            <span class="highlight">UNESCO Sites</span>
+                            <span class="highlight">Cultural Immersion</span>
+                        </div>
+                        <div class="tour-footer">
+                            <div class="tour-price">
+                                <span class="price">$1,250</span>
+                                <span class="price-note" data-en="per person" data-uz="kishi uchun" data-ru="за человека">per person</span>
+                            </div>
+                            <button class="tour-btn" data-en="Book Now" data-uz="Buyurtma berish" data-ru="Забронировать">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card" data-category="cultural adventure">
+                    <div class="tour-image">
+                        <img src="https://images.unsplash.com/photo-1513553404607-988bf2703777?w=400&h=300&fit=crop" alt="Crafts Tour">
+                        <div class="tour-overlay">
+                            <div class="tour-duration">6 Days</div>
+                        </div>
+                    </div>
+                    <div class="tour-content">
+                        <h3 data-en="Artisan & Crafts Tour" data-uz="Hunarmand va hunarmandchilik sayohati" data-ru="Тур ремесленников">Artisan & Crafts Tour</h3>
+                        <p class="tour-description" data-en="Meet master craftsmen, learn traditional techniques of carpet weaving, ceramics, and silk production in authentic workshops." data-uz="Usta hunarmandlar bilan tanishing, gilam to'qish, kulolchilik va ipak ishlab chiqarishning an'anaviy usullarini o'rganing." data-ru="Встретьтесь с мастерами-ремесленниками, изучите традиционные техники ковроткачества, керамики и производства шёлка.">
+                            Meet master craftsmen, learn traditional techniques of carpet weaving, ceramics, and silk production in authentic workshops.
+                        </p>
+                        <div class="tour-highlights">
+                            <span class="highlight">Master Workshops</span>
+                            <span class="highlight">Silk Factory</span>
+                            <span class="highlight">Ceramic Studio</span>
+                        </div>
+                        <div class="tour-footer">
+                            <div class="tour-price">
+                                <span class="price">$680</span>
+                                <span class="price-note" data-en="per person" data-uz="kishi uchun" data-ru="за человека">per person</span>
+                            </div>
+                            <button class="tour-btn" data-en="Book Now" data-uz="Buyurtma berish" data-ru="Забронировать">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tour-card" data-category="adventure">
+                    <div class="tour-image">
+                        <img src="https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=400&h=300&fit=crop" alt="Desert Tour">
+                        <div class="tour-overlay">
+                            <div class="tour-duration">8 Days</div>
+                            <div class="tour-badge">Adventure</div>
+                        </div>
+                    </div>
+                    <div class="tour-content">
+                        <h3 data-en="Kyzylkum Desert Adventure" data-uz="Qizilqum cho'li sarguzashti" data-ru="Приключение в пустыне Кызылкум">Kyzylkum Desert Adventure</h3>
+                        <p class="tour-description" data-en="Experience the mystical Kyzylkum Desert with camel trekking, traditional yurt stays, and visits to ancient desert fortresses." data-uz="Tuya safari, an'anaviy uy-ro'zg'orda qolish va qadimiy cho'l qal'alarini ziyorat qilish bilan sirli Qizilqum cho'lini his eting." data-ru="Познайте мистическую пустыню Кызылкум с верблюжьими походами, проживанием в традиционных юртах.">
+                            Experience the mystical Kyzylkum Desert with camel trekking, traditional yurt stays, and visits to ancient desert fortresses.
+                        </p>
+                        <div class="tour-highlights">
+                            <span class="highlight">Camel Trekking</span>
+                            <span class="highlight">Yurt Camp</span>
+                            <span class="highlight">Desert Fortresses</span>
+                        </div>
+                        <div class="tour-footer">
+                            <div class="tour-price">
+                                <span class="price">$850</span>
+                                <span class="price-note" data-en="per person" data-uz="kishi uchun" data-ru="за человека">per person</span>
+                            </div>
+                            <button class="tour-btn" data-en="Book Now" data-uz="Buyurtma berish" data-ru="Забронировать">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle" data-en="Visual Journey" data-uz="Vizual sayohat" data-ru="Визуальное путешествие">Visual Journey</div>
+                <h2 class="section-title" data-en="Uzbekistan Through Our Lens" data-uz="Bizning ob'ektivimiz orqali O'zbekiston" data-ru="Узбекистан через наш объектив">Uzbekistan Through Our Lens</h2>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item large">
+                    <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?w=600&h=400&fit=crop" alt="Registan Square">
+                    <div class="gallery-overlay">
+                        <h4>Registan Square</h4>
+                        <p data-en="Heart of Samarkand" data-uz="Samarqandning yuragi" data-ru="Сердце Самарканда">Heart of Samarkand</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=400&fit=crop" alt="Bukhara Minaret">
+                    <div class="gallery-overlay">
+                        <h4>Kalyan Minaret</h4>
+                        <p data-en="Symbol of Bukhara" data-uz="Buxoro ramzi" data-ru="Символ Бухары">Symbol of Bukhara</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1513553404607-988bf2703777?w=300&h=400&fit=crop" alt="Traditional Crafts">
+                    <div class="gallery-overlay">
+                        <h4>Traditional Crafts</h4>
+                        <p data-en="Living Heritage" data-uz="Tirik meros" data-ru="Живое наследие">Living Heritage</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item wide">
+                    <img src="https://images.unsplash.com/photo-1539650116574-75c0c6d5b8b7?w=600&h=300&fit=crop" alt="Khiva Panorama">
+                    <div class="gallery-overlay">
+                        <h4>Ichan Kala</h4>
+                        <p data-en="Medieval Khiva" data-uz="O'rta asr Xivasi" data-ru="Средневековая Хива">Medieval Khiva</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=300&h=400&fit=crop" alt="Blue Domes">
+                    <div class="gallery-overlay">
+                        <h4>Blue Domes</h4>
+                        <p data-en="Architectural Marvel" data-uz="Me'moriy mo'jiza" data-ru="Архитектурное чудо">Architectural Marvel</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1439066615861-d1af74d74000?w=300&h=400&fit=crop" alt="Kyzylkum Desert">
+                    <div class="gallery-overlay">
+                        <h4>Kyzylkum Desert</h4>
+                        <p data-en="Desert Adventure" data-uz="Cho'l sarguzashti" data-ru="Пустынное приключение">Desert Adventure</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-subtitle" data-en="Plan Your Journey" data-uz="Sayohatingizni rejalashtiring" data-ru="Спланируйте путешествие">Plan Your Journey</div>
+                <h2 class="section-title" data-en="Start Your Uzbekistan Adventure" data-uz="O'zbekiston sarguzashtingizni boshlang" data-ru="Начните своё приключение в Узбекистане">Start Your Uzbekistan Adventure</h2>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4 data-en="Visit Our Office" data-uz="Ofisimizga tashrif buyuring" data-ru="Посетите наш офис">Visit Our Office</h4>
+                            <p data-en="Tashkent, Uzbekistan" data-uz="Toshkent, O'zbekiston" data-ru="Ташкент, Узбекистан">Tashkent, Uzbekistan</p>
+                            <span>Amir Temur Avenue 15</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4 data-en="Call Our Experts" data-uz="Mutaxassislarimizga qo'ng'iroq qiling" data-ru="Звоните нашим экспертам">Call Our Experts</h4>
+                            <p>+998 71 123 45 67</p>
+                            <span data-en="Available 24/7" data-uz="24/7 mavjud" data-ru="Доступно 24/7">Available 24/7</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4 data-en="Send a Message" data-uz="Xabar yuboring" data-ru="Отправить сообщение">Send a Message</h4>
+                            <p>info@silkroaddreams.uz</p>
+                            <span data-en="Response within 2 hours" data-uz="2 soat ichida javob" data-ru="Ответ в течение 2 часов">Response within 2 hours</span>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <input type="text" placeholder="Your Name" data-en-placeholder="Your Name" data-uz-placeholder="Ismingiz" data-ru-placeholder="Ваше имя" required>
+                        <input type="email" placeholder="Email Address" data-en-placeholder="Email Address" data-uz-placeholder="Email manzil" data-ru-placeholder="Email адрес" required>
+                    </div>
+                    <div class="form-row">
+                        <select required>
+                            <option value="" data-en="Select Tour Interest" data-uz="Sayohat qiziqishini tanlang" data-ru="Выберите интересующий тур">Select Tour Interest</option>
+                            <option value="samarkand" data-en="Samarkand Explorer" data-uz="Samarqand tadqiqotchisi" data-ru="Исследователь Самарканда">Samarkand Explorer</option>
+                            <option value="bukhara" data-en="Bukhara Heritage" data-uz="Buxoro merosi" data-ru="Наследие Бухары">Bukhara Heritage</option>
+                            <option value="khiva" data-en="Khiva Time Travel" data-uz="Xiva vaqt sayohati" data-ru="Путешествие во времени в Хиве">Khiva Time Travel</option>
+                            <option value="grand" data-en="Grand Uzbekistan Tour" data-uz="Buyuk O'zbekiston sayohati" data-ru="Большой тур по Узбекистану">Grand Uzbekistan Tour</option>
+                            <option value="crafts" data-en="Artisan & Crafts" data-uz="Hunarmand va hunarmandchilik" data-ru="Ремесленники">Artisan & Crafts</option>
+                            <option value="desert" data-en="Desert Adventure" data-uz="Cho'l sarguzashti" data-ru="Пустынное приключение">Desert Adventure</option>
+                        </select>
+                        <input type="tel" placeholder="Phone Number" data-en-placeholder="Phone Number" data-uz-placeholder="Telefon raqam" data-ru-placeholder="Номер телефона">
+                    </div>
+                    <textarea placeholder="Tell us about your dream journey to Uzbekistan..." data-en-placeholder="Tell us about your dream journey to Uzbekistan..." data-uz-placeholder="O'zbekistonga orzuingizdagi sayohat haqida aytib bering..." data-ru-placeholder="Расскажите о путешествии вашей мечты в Узбекистан..." rows="5" required></textarea>
+                    <button type="submit" class="submit-btn">
+                        <span data-en="Start My Uzbekistan Journey" data-uz="O'zbekiston sayohatimni boshlash" data-ru="Начать моё путешествие в Узбекистан">Start My Uzbekistan Journey</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-mosque"></i>
+                        </div>
+                        <div class="logo-text">
+                            <span class="brand-name">Silk Road Dreams</span>
+                            <span class="brand-tagline">Uzbekistan Tours</span>
+                        </div>
+                    </div>
+                    <p data-en="Discover the heart of Central Asia through authentic experiences in Uzbekistan's ancient Silk Road cities." data-uz="O'zbekistonning qadimiy Ipak yo'li shaharlarida haqiqiy tajribalar orqali Markaziy Osiyoning qalbini kashf eting." data-ru="Откройте сердце Центральной Азии через аутентичные впечатления в древних городах Узбекистана на Шёлковом пути.">
+                        Discover the heart of Central Asia through authentic experiences in Uzbekistan's ancient Silk Road cities.
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 data-en="Quick Links" data-uz="Tezkor havolalar" data-ru="Быстрые ссылки">Quick Links</h4>
+                        <ul>
+                            <li><a href="#home" data-en="Home" data-uz="Bosh sahifa" data-ru="Главная">Home</a></li>
+                            <li><a href="#about" data-en="About" data-uz="Biz haqimizda" data-ru="О нас">About</a></li>
+                            <li><a href="#tours" data-en="Tours" data-uz="Sayohatlar" data-ru="Туры">Tours</a></li>
+                            <li><a href="#gallery" data-en="Gallery" data-uz="Galereya" data-ru="Галерея">Gallery</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4 data-en="Destinations" data-uz="Yo'nalishlar" data-ru="Направления">Destinations</h4>
+                        <ul>
+                            <li><a href="#" data-en="Samarkand" data-uz="Samarqand" data-ru="Самарканд">Samarkand</a></li>
+                            <li><a href="#" data-en="Bukhara" data-uz="Buxoro" data-ru="Бухара">Bukhara</a></li>
+                            <li><a href="#" data-en="Khiva" data-uz="Xiva" data-ru="Хива">Khiva</a></li>
+                            <li><a href="#" data-en="Tashkent" data-uz="Toshkent" data-ru="Ташкент">Tashkent</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-social">
+                    <h4 data-en="Follow Our Journey" data-uz="Sayohatimizni kuzatib boring" data-ru="Следите за нашим путешествием">Follow Our Journey</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Silk Road Dreams. <span data-en="All rights reserved." data-uz="Barcha huquqlar himoyalangan." data-ru="Все права защищены.">All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Elements -->
+    <div class="floating-elements">
+        <div class="scroll-to-top" id="scrollToTop">
+            <i class="fas fa-chevron-up"></i>
+        </div>
+        <div class="quick-contact" id="quickContact">
+            <i class="fas fa-headset"></i>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
